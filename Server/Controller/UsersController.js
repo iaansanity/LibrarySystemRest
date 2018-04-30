@@ -7,7 +7,7 @@ const RunUserFunction = function(data)
 		if(data.method=='INSERT')
 		{
 			var User = new Users({
-			  name: data.name
+			  name: data.body.name
 			});
 
 			User.save().then((res)=>{
