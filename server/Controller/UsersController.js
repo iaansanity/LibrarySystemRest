@@ -11,7 +11,10 @@ const RunUserFunction = function(data)
 			});
 
 			User.save().then((res)=>{
-				resolve(res);
+				resolve({
+					status:1,
+					message: 'Successfully added a user.'
+				});
 			},(e)=>{
 				reject(e);
 			})
@@ -21,9 +24,17 @@ const RunUserFunction = function(data)
 			Users.find().then((res)=>{
 				resolve(res);
 			},(e)=>{
-				reject(e);
+				reject({
+					status:0,
+					message:'Failed to fetch users.'
+				});
 			})
 		}
+		else
+			reject({
+				status:0,
+				message:'Method not found.'
+			})
 	})
 }
 
