@@ -1,5 +1,5 @@
-const mongoose = require( process.cwd() + '/server/db/mongoose');
-const Users = require( process.cwd() + '/server/models/Users');
+const mongoose = require( process.cwd() + '/Server/DB/mongoose');
+const Users = require( process.cwd() + '/Server/Models/Users');
 
 const RunUserFunction = function(data)
 {
