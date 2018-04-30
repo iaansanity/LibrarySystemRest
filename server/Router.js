@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Users = require( './server/controller/UsersController');
+const Users = require( './controller/UsersController');
 
 router.post('/', (req, res) => {
 	if(!req.body.module)
